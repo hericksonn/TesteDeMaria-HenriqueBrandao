@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RelatorioOSDataSet" targetNamespace="http://tempuri.org/RelatorioOSDataSet.xsd"
+           xmlns:mstns="http://tempuri.org/RelatorioOSDataSet.xsd"
+           xmlns="http://tempuri.org/RelatorioOSDataSet.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="RelatorioOSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LinhasOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrdemServicoId" type="xs:int" minOccurs="0" />
+              <xs:element name="Cliente" type="xs:string" minOccurs="0" />
+              <xs:element name="Documento" type="xs:string" minOccurs="0" />
+              <xs:element name="DataAbertura" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataConclusao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="ValorTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValorImposto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

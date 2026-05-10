@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="Generator" content="Evidencias tecnicas" />
+<title>Evidencias - DeMariaTeste</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.35; max-width: 21cm; margin: 2cm auto; color: #222; }
+  h1 { font-size: 18pt; border-bottom: 1px solid #333; padding-bottom: 6pt; }
+  h2 { font-size: 14pt; margin-top: 18pt; }
+  h3 { font-size: 12pt; margin-top: 14pt; }
+  p { margin: 6pt 0; text-align: justify; }
+  .meta { background: #f5f5f5; padding: 10pt; border-left: 4px solid #444; margin: 12pt 0; }
+  .evidence-img { max-width: 100%; height: auto; border: 1px solid #ccc; margin: 10pt 0; }
+  .evidence-missing {
+    border: 1px dashed #c77;
+    background: #fff5f5;
+    color: #8a2f2f;
+    padding: 8pt 10pt;
+    margin: 10pt 0;
+    font-size: 10pt;
+  }
+  figcaption { font-size: 10pt; color: #444; margin-bottom: 8pt; }
+  table { border-collapse: collapse; width: 100%; margin: 10pt 0; font-size: 10pt; }
+  th, td { border: 1px solid #999; padding: 6pt 8pt; vertical-align: top; }
+  th { background: #e8e8e8; text-align: left; }
+  .note { font-size: 10pt; color: #444; }
+</style>
+</head>
+<body>
+
+<h1>Evidencias - DeMariaTeste</h1>
+
+<div class="meta">
+  <strong>Projeto:</strong> DeMaria - Gestao de OS (Windows Forms)<br />
+  <strong>Documento:</strong> Evidencias funcionais e tecnicas<br />
+  <strong>Ambiente:</strong> Local + Supabase PostgreSQL<br />
+  <strong>Data:</strong> 10/05/2026<br />
+  <strong>Responsavel:</strong> Henrique Brandao
+</div>
+
+<h2>1. Resumo</h2>
+<p>Este documento consolida as evidencias dos testes do sistema DeMariaTeste, cobrindo login, cadastros, ordens de servico, relatorios, auditoria, logs e concorrencia otimista (opcional).</p>
+
+<h2>2. Matriz de evidencias</h2>
+<table>
+  <tr><th>ID</th><th>Cenario</th><th>Status</th></tr>
+  <tr><td>img01-img02</td><td>Login e tela principal</td><td>Concluido</td></tr>
+  <tr><td>img03-img07</td><td>Cadastros de clientes</td><td>Concluido</td></tr>
+  <tr><td>img08-img10</td><td>Cadastros de servicos</td><td>Concluido</td></tr>
+  <tr><td>img11-img18</td><td>OS - cadastro e regras de negocio</td><td>Concluido</td></tr>
+  <tr><td>img19-img21a</td><td>Relatorios</td><td>Concluido</td></tr>
+  <tr><td>img22-img23b</td><td>Auditoria no banco</td><td>Concluido</td></tr>
+  <tr><td>img24</td><td>Arquivo de log</td><td>Concluido</td></tr>
+  <tr><td>img25-img25d</td><td>Concorrencia otimista (opcional)</td><td>Concluido</td></tr>
+</table>
+
+<h2>3. Evidencias por item</h2>
+
+<h3>3.1 Login e tela principal</h3>
+<figure>
+  <figcaption>img01 - Tela de login do sistema.</figcaption>
+  <img class="evidence-img" src="imagens/img01_login.png" alt="img01 login" />
+</figure>
+<figure>
+  <figcaption>img02 - Tela principal apos login.</figcaption>
+  <img class="evidence-img" src="imagens/img02_principal_pos_login.png" alt="img02 principal pos login" />
+</figure>
+
+<h3>3.2 Cadastros - Clientes</h3>
+<figure>
+  <figcaption>img03 - Lista de clientes do seed.</figcaption>
+  <img class="evidence-img" src="imagens/img03_clientes_lista.png" alt="img03 clientes lista" />
+</figure>
+<figure>
+  <figcaption>img04 - Filtro por nome.</figcaption>
+  <img class="evidence-img" src="imagens/img04_clientes_filtro_nome.png" alt="img04 filtro clientes" />
+</figure>
+<figure>
+  <figcaption>img05 - Cliente salvo com sucesso.</figcaption>
+  <img class="evidence-img" src="imagens/img05_cliente_salvo.png" alt="img05 cliente salvo" />
+</figure>
+<figure>
+  <figcaption>img05a - Formulario de cliente preenchido (extra).</figcaption>
+  <img class="evidence-img" src="imagens/img05a_cliente_form_preenchido.png" alt="img05a cliente form preenchido" />
+</figure>
+<figure>
+  <figcaption>img06 - Validacao de CPF.</figcaption>
+  <img class="evidence-img" src="imagens/img06_cliente_validacao_cpf.png" alt="img06 validacao cpf" />
+</figure>
+<figure>
+  <figcaption>img07 - Bloqueio de exclusao de cliente com OS vinculada.</figcaption>
+  <img class="evidence-img" src="imagens/img07_cliente_bloqueio_exclusao.png" alt="img07 bloqueio exclusao cliente" />
+</figure>
+
+<h3>3.3 Cadastros - Servicos</h3>
+<figure>
+  <figcaption>img08 - Lista de servicos do seed.</figcaption>
+  <img class="evidence-img" src="imagens/img08_servicos_lista.png" alt="img08 servicos lista" />
+</figure>
+<figure>
+  <figcaption>img09 - Servico salvo com sucesso.</figcaption>
+  <img class="evidence-img" src="imagens/img09_servico_salvo.png" alt="img09 servico salvo" />
+</figure>
+<figure>
+  <figcaption>img10 - Validacao de valor.</figcaption>
+  <img class="evidence-img" src="imagens/img10_servico_validacao_valor.png" alt="img10 validacao valor servico" />
+</figure>
+
+<h3>3.4 Ordens de Servico - cadastro</h3>
+<figure>
+  <figcaption>img11 - Lista de OS vazia.</figcaption>
+  <img class="evidence-img" src="imagens/img11_os_lista_vazia.png" alt="img11 os lista vazia" />
+</figure>
+<figure>
+  <figcaption>img12 - Formulario com itens da OS.</figcaption>
+  <img class="evidence-img" src="imagens/img12_os_form_com_itens.png" alt="img12 os formulario com itens" />
+</figure>
+<figure>
+  <figcaption>img13 - Mensagem de OS salva com sucesso.</figcaption>
+  <img class="evidence-img" src="imagens/img13_os_salva_sucesso.png" alt="img13 os salva sucesso" />
+</figure>
+<figure>
+  <figcaption>img14 - Lista com a OS criada.</figcaption>
+  <img class="evidence-img" src="imagens/img14_os_lista_uma_os.png" alt="img14 lista uma os" />
+</figure>
+
+<h3>3.5 Ordens de Servico - regras de negocio</h3>
+<figure>
+  <figcaption>img15 - OS concluida.</figcaption>
+  <img class="evidence-img" src="imagens/img15_os_status_concluida.png" alt="img15 status concluida" />
+</figure>
+<figure>
+  <figcaption>img15a - Mudanca de status (extra).</figcaption>
+  <img class="evidence-img" src="imagens/img15a_os_status_encaminhamento.png" alt="img15a status encaminhamento" />
+</figure>
+<figure>
+  <figcaption>img16 - OS concluida bloqueada para edicao.</figcaption>
+  <img class="evidence-img" src="imagens/img16_os_concluida_bloqueada.png" alt="img16 bloqueio os concluida" />
+</figure>
+<figure>
+  <figcaption>img17 - OS cancelada com motivo.</figcaption>
+  <img class="evidence-img" src="imagens/img17_os_cancelada.png" alt="img17 os cancelada" />
+</figure>
+<figure>
+  <figcaption>img17a - Dialogo de confirmacao de cancelamento (extra).</figcaption>
+  <img class="evidence-img" src="imagens/img17a_os_dialog_cancelar.png" alt="img17a dialog cancelar os" />
+</figure>
+<figure>
+  <figcaption>img18 - Filtro na lista de OS.</figcaption>
+  <img class="evidence-img" src="imagens/img18_os_filtro.png" alt="img18 filtro os" />
+</figure>
+
+<h3>3.6 Relatorios</h3>
+<figure>
+  <figcaption>img19 - Tela de relatorio com filtros.</figcaption>
+  <img class="evidence-img" src="imagens/img19_relatorio_filtros.png" alt="img19 relatorio filtros" />
+</figure>
+<figure>
+  <figcaption>img20 - Relatorio gerado no ReportViewer.</figcaption>
+  <img class="evidence-img" src="imagens/img20_relatorio_gerado.png" alt="img20 relatorio gerado" />
+</figure>
+<figure>
+  <figcaption>img21 - Exportacao de PDF com sucesso.</figcaption>
+  <img class="evidence-img" src="imagens/img21_relatorio_pdf.png" alt="img21 relatorio exportacao pdf" />
+</figure>
+<figure>
+  <figcaption>img21a - PDF aberto no leitor.</figcaption>
+  <img class="evidence-img" src="imagens/img21a_relatorio_pdf_aberto.png" alt="img21a pdf aberto" />
+  <figcaption>Arquivo PDF gerado: <code>C:\Users\heric\Downloads\Relatorio_OS_20260510_1059.pdf</code></figcaption>
+</figure>
+
+<h3>3.7 Auditoria (Supabase / pgAdmin)</h3>
+<figure>
+  <figcaption>img22 - Tabela auditoria com snapshots JSON.</figcaption>
+  <img class="evidence-img" src="imagens/img22_auditoria_supabase.png" alt="img22 auditoria supabase" />
+</figure>
+<figure>
+  <figcaption>img23 - Historico de status da OS.</figcaption>
+  <img class="evidence-img" src="imagens/img23_historico_status.png" alt="img23 historico status" />
+</figure>
+<figure>
+  <figcaption>img23a - Historico com motivo de cancelamento (extra).</figcaption>
+  <img class="evidence-img" src="imagens/img23a_historico_com_motivo.png" alt="img23a historico com motivo" />
+</figure>
+<figure>
+  <figcaption>img23b - Visao consolidada por OS (extra).</figcaption>
+  <img class="evidence-img" src="imagens/img23b_visao_consolidada_por_os.png" alt="img23b visao consolidada os" />
+</figure>
+
+<h3>3.8 Logs</h3>
+<figure>
+  <figcaption>img24 - Arquivo de log.</figcaption>
+  <img class="evidence-img" src="imagens/img24_log_arquivo.png" alt="img24 log arquivo" />
+</figure>
+
+<h3>3.9 Concorrencia otimista (opcional)</h3>
+<figure>
+  <figcaption>img25 - Mensagem de conflito na segunda instancia.</figcaption>
+  <img class="evidence-img" src="imagens/img25_concorrencia_otimista.png" alt="img25 concorrencia otimista" />
+</figure>
+<figure>
+  <figcaption>img25a - Duas telas da mesma OS abertas.</figcaption>
+  <img class="evidence-img" src="imagens/img25a_concorrencia_duas_telas.png" alt="img25a concorrencia duas telas" />
+</figure>
+<figure>
+  <figcaption>img25b - Edicao paralela em duas instancias.</figcaption>
+  <img class="evidence-img" src="imagens/img25b_concorrencia_edicao_paralela.png" alt="img25b concorrencia edicao paralela" />
+</figure>
+<figure>
+  <figcaption>img25c - Primeira instancia salva com sucesso.</figcaption>
+  <img class="evidence-img" src="imagens/img25c_concorrencia_salvar_primeira.png" alt="img25c concorrencia salvar primeira" />
+</figure>
+<figure>
+  <figcaption>img25d - Lista atualizada apos recarregar.</figcaption>
+  <img class="evidence-img" src="imagens/img25d_concorrencia_lista_atualizada.png" alt="img25d concorrencia lista atualizada" />
+</figure>
+
+<h2>4. Observacoes finais</h2>
+<p class="note">Para as imagens aparecerem no documento, os arquivos devem estar na pasta <code>imagens/</code> ao lado deste HTML, com os mesmos nomes usados no <code>src</code> das tags <code>&lt;img&gt;</code>.</p>
+<p class="note">Em 10/05/2026 foram enviadas evidencias complementares via chat cobrindo img07, img15-18, img19-25d e consultas no Supabase. O PDF de relatorio informado foi <code>C:\Users\heric\Downloads\Relatorio_OS_20260510_1059.pdf</code>.</p>
+
+<script>
+  (function () {
+    var imgs = document.querySelectorAll("img.evidence-img");
+    imgs.forEach(function (img) {
+      img.addEventListener("error", function () {
+        var missing = document.createElement("div");
+        missing.className = "evidence-missing";
+        missing.textContent = "Evidencia pendente: " + img.getAttribute("src");
+        img.parentNode.insertBefore(missing, img.nextSibling);
+        img.style.display = "none";
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

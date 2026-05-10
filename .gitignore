@@ -1,0 +1,52 @@
+## Visual Studio / .NET
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.cache
+.vs/
+.vscode/
+
+## Build outputs
+*.dll
+*.pdb
+*.exe
+*.lib
+*.exp
+*.iobj
+*.ipdb
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+
+## Logs gerados em runtime
+logs/
+*.log
+
+## Banco local / dump
+*.backup
+*.dump
+
+## ReportViewer arquivos temporarios
+*.rpx
+
+## Sistema operacional
+Thumbs.db
+.DS_Store
+
+## Credenciais locais (NUNCA comitar)
+tools/supabase.env.ps1
+*.env
+.env
+.env.local
+
+## Build da ferramenta de provisionamento (.NET 8)
+tools/provision/bin/
+tools/provision/obj/
